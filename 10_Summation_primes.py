@@ -1,3 +1,6 @@
+# The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+# Find the sum of all the primes below two million.
 #reference http://www.daniweb.com/software-development/python/code/216558/prime-number-generator-python
 
 def getPML(n):
@@ -15,6 +18,7 @@ def getPML(n):
 		i += 1
 		m += 2 
 	return [2]+[i for i in candidates if i]
+
 if __name__ == '__main__':
 	n = 2000000
 	PMlist  = getPML(n)
