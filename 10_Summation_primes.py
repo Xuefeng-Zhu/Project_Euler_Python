@@ -16,9 +16,9 @@ def getPML(n):
 		m += 2 
 	return [2]+[i for i in candidates if i]
 if __name__ == '__main__':
-	n = 200000
+	n = 2000000
 	PMlist  = getPML(n)
-	print PMlist[10000]
+	print sum(PMlist)
 
 
 	
