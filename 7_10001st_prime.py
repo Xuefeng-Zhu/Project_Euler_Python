@@ -14,11 +14,11 @@ def getPML(n):
 				temp += m
 		i += 1
 		m += 2 
-	return [i for i in candidates if i]
+	return [2]+[i for i in candidates if i]
 if __name__ == '__main__':
-	n = 600851475143
+	n = 200000
 	PMlist  = getPML(n)
-	print PMlist
-	i = -1
+	print PMlist[10000]
+
 
 	
