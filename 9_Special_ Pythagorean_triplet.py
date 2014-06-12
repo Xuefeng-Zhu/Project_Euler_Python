@@ -7,10 +7,10 @@
 # Find the product abc.
 
 if __name__ == '__main__':
-	n = 1000
+	n = 1000000
 	for a in xrange(1, n/3):
 		for b in xrange(a+1, (n-a)/2):
 			c = n - a - b
 			if (a**2 + b**2 == c**2):
 				print a * b * c
-
+				exit()
