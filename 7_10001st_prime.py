@@ -15,5 +15,4 @@ if __name__ == '__main__':
 		i += 2
 		if is_Prime(i):
 			count += 1
-		
 	print i
