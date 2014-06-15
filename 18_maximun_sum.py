@@ -1,5 +1,4 @@
 # I use brute force for this question
-maxPath = 0 
 data = """\
 75
 95 64
@@ -17,23 +16,13 @@ data = """\
 63 66 04 68 89 53 67 30 73 16 69 87 40 31
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"""
 
-def findMax(tri, path,x,y):
-	if x == len(tri):
-		global maxPath
-		temp = sum(path)
-		if temp > maxPath:
-			maxPath = temp
-		return
-	path.append(tri[x][y])
-	findMax(tri, path, x+1, y)
-	findMax(tri, path, x+1, y+1)
-	path.pop()
+def findMax(tri,x,y):
+	return 0 if x==len(tri) else tri[x][y]+max(findMax(tri, x+1, y),findMax(tri, x+1, y+1))
 	
 
 if __name__ == '__main__':
+	print 
 	tri = [map(int,line.split()) for line in data.split('\n')] 
-	path = []
-	findMax(tri, path, 0, 0)
-	print maxPath
+	print findMax(tri, 0, 0)
 
 	
